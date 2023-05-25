@@ -21,4 +21,4 @@ class Solution:
 
 t = Solution()
 r = t.lengthOfLongestSubstring("abccadda")
-p = 3
+pass

@@ -13,3 +13,4 @@ class Solution:
 
 t = Solution()
 t.twoSum([0, 4, 3, 0], 0)
+pass
