@@ -31,4 +31,3 @@ l2.next.next = ListNode(4)
 l3 = ListNode(2)
 l3.next = ListNode(6)
 r = t.mergeKLists([l1, l2, l3])
-pass

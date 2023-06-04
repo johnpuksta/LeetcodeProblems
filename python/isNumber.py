@@ -16,4 +16,3 @@ class Solution:
 
 t = Solution()
 r = t.isNumber("inf")
-pass

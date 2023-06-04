@@ -35,4 +35,3 @@ nums = [5, 2, 5, 3, 5, 3, 1, 1, 3]
 k = 2
 t = Solution()
 r = t.topKFrequent(nums, 2)
-pass

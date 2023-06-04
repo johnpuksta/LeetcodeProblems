@@ -14,4 +14,3 @@ class Solution:
 
 t = Solution()
 r = t.isPalindrome(121)
-pass

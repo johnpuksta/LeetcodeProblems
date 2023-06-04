@@ -7,4 +7,3 @@ class Solution:
 
 t = Solution()
 t.lengthOfLastWord("Hello World")
-pass
