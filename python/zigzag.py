@@ -29,4 +29,3 @@ t = Solution()
 r = t.convert("ABCDE", 5)
 # "PAYPALISHIRING"
 # "PINALSIGYAHRPI"
-pass
