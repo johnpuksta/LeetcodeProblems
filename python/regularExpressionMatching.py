@@ -69,4 +69,3 @@ class Solution:
 
 t = Solution()
 r = t.isMatch("a", "ab*")
-pass
