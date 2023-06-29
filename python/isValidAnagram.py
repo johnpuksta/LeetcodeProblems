@@ -1,6 +1,6 @@
 # Is Valid Anagram - Easy Difficulty
 class Solution:
-    def isAnagram(self, s1: str, s2: str) -> bool:
+    def isAnagramNaiveApproach(self, s1: str, s2: str) -> bool:
         if (len(s1) != len(s2)):
             return False
 
@@ -23,3 +23,9 @@ class Solution:
             if num != d1[c]:
                 return False
         return True
+
+    def isAnagram(self, s1: str, s2: str) -> bool:
+        if sorted(s1) == sorted(s2):
+            return True
+        else:
+            return False
