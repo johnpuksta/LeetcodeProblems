@@ -1,6 +1,9 @@
 # Group Anagrams Problem - Medium Difficulty
+from isValidAnagram import Solution as AnaValidator
+
+
 class Solution:
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+    def groupAnagramsNaive(self, strs: list[str]) -> list[list[str]]:
         retList = []
         while (len(strs) > 0):
             temp = []
@@ -13,7 +16,7 @@ class Solution:
             i = 1
             temp.append(strs[0])
             while (i < n):
-                if (self.isAnagram(strs[0], strs[i])):
+                if (AnaValidator.isAnagram(strs[0], strs[i])):
                     temp.append(strs[i])
                     strs.pop(i)
                     n -= 1
@@ -23,29 +26,15 @@ class Solution:
             retList.append(temp)
         return retList
 
-    def isAnagram(self, s1: str, s2: str) -> bool:
-        if (len(s1) != len(s2)):
-            return False
-
-        d1 = {}
-        d2 = {}
-        for s in s1:
-            if s in d1:
-                d1[s] += 1
-            else:
-                d1[s] = 1
-        for s in s2:
-            if s in d2:
-                d2[s] += 1
-            else:
-                d2[s] = 1
-
-        for c, num in d2.items():
-            if c not in d1:
-                return False
-            if num != d1[c]:
-                return False
-        return True
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
+        d = {}
+        for s in strs:
+            temp = "".join(sorted(s))
+            if temp in d:
+                d[temp].append(s)
+                continue
+            d[temp] = [s]
+        return d.values()
 
 
 t = Solution()
